@@ -8,6 +8,7 @@
 </template>
 
 <script>
+// ... (script kısmı aynı kalıyor)
 export default {
   name: 'LinkButton',
   props: {
@@ -17,7 +18,6 @@ export default {
   },
   computed: {
     getIconClass() {
-      // Örnek Font Awesome kullanımı
       if (this.icon === 'youtube') return 'fab fa-youtube';
       if (this.icon === 'twitch') return 'fab fa-twitch';
       if (this.icon === 'instagram') return 'fab fa-instagram';
@@ -56,6 +56,30 @@ export default {
     margin-right: 15px;
     font-size: 1.2em; /* İkon boyutu */
     color: #ffd700; /* İkon rengi */
+  }
+
+  /* ------------------------------------- */
+  /* MOBİL UYUMLULUK KISMI       */
+  /* ------------------------------------- */
+  @media (max-width: 600px) {
+    padding: 12px 25px; /* Padding'i azalt */
+    font-size: 1.2em; /* Metin boyutunu küçült */
+    letter-spacing: 1px;
+    border-width: 2px; /* Kenarlık kalınlığını azalt */
+
+    .icon-wrapper {
+      margin-right: 10px;
+      font-size: 1em; /* İkon boyutunu küçült */
+    }
+  }
+
+  @media (max-width: 400px) {
+    padding: 10px 20px;
+    font-size: 1em;
+    .icon-wrapper {
+      margin-right: 8px;
+      font-size: 0.9em;
+    }
   }
 }
 </style>
