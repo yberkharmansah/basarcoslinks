@@ -23,7 +23,7 @@
       <div class="bottom-section">
         <BottomSectionItem text="Hakkımda" @action="dialog = true" />
 
-        <BottomSectionItem text="Destekle" link="/support" />
+        <BottomSectionItem text="Destekle" link="https://streamlabs.com/basarcos/tip" />
       </div>
 
       <v-dialog
